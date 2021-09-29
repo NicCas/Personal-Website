@@ -1,33 +1,8 @@
-/* Add at least one property from each of the following types:
-
-    2. Text: letter-spacing, line-height, text-align, text-decoration, or text-indent
-    5. Borders: border, border-color, border-width, border-style, border-top, border-top-color, border-top-width, etc.
-    7. Sizing: height, max-height, max-width, min-height, min-width, width
-    8. Lists: list-style, list-style-image, or list-style-type
-    9. Absolute units -- some of the property values should be in terms of absolute numbers
-    10. Relative units -- some of the property values should be relative units (such as a percentage)
-    11. 'float' layout property
-    12. 'display' layout property
-    13. 'clear' layout property
-    14. 'overflow' layout property
-    15. 'position' layout property
-    16. 'visibility' layout property
-    17. 'z-index' layout property
-
-Required Selectors
-
-    A. Element selector
-    B. Grouped element selector]
-    F. Contextual selector
-    G. Details
-    H. Summary
-*/
-
 body {
     font-family: "Lucida Console", "Courier New", monospace; /* Requirement-2.1 */
     background-color: #F5dcbd; /* Requirement-2.4 */
     background-image: url("../Assets/papernoise.png");
-    background-size: 40%;
+    background-size: 40%; /* Requirement-2.10 */
     color: black; /* Requirement-2.3 */
     padding: 10pt;
 }
@@ -38,13 +13,13 @@ a{
 
 ul.head { /* Requirement-2.C */
     list-style-type: none;
-    margin: 10px;
+    margin: 10px; /* Requirement-2.9 */
     margin-bottom: 50px;
     padding: 10px;
     padding-bottom: 0;
     box-sizing: content-box;
     height: 40px;
-    overflow: auto;
+    overflow: auto; /* Requirement-2.14 */
     border-bottom: thin solid black; /* Requirement-2.5 */
 }
   
@@ -62,6 +37,7 @@ li.head a { /* Requirement-2.E */
     border: thin solid black;
     border-bottom: white;
     border-radius: 10px 10px 0 0;
+    z-index: 1; /* Requirement-2.17 */
     
 }
 
@@ -107,4 +83,45 @@ li.foot a:hover {
     border-radius: 0 0 10px 10px;
 }
 
+figure{
+    position: relative; /* Requirement-2.15 */
+    margin: 10px;
+}
+details{ /* Requirement-2.G */
+    letter-spacing: 5px; /* Requirement-2.2 */
+    font-family: "Papyrus", fantasy;
+    font-size: 20pt;
+    color: red;
+}
+summary{ /* Requirement-2.H */
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 12pt;
+    color: black;
+}
+details summary{ /* Requirement-2.F */
+    color: black;
+}
 
+#twix{
+    width:500px; /* Requirement-2.7 */
+    height:500px;
+    float:left; /* Requirement-2.11 */
+}
+figcaption{
+    clear: left; /* Requirement-2.13 */
+}
+
+#ffacts li { /* Requirement-2.A */
+    list-style: url('../Assets/Octopus.svg');
+    list-style: square; /* Requirement-2.8 */
+}
+
+ol { 
+    list-style-type: upper-roman;
+    margin: 10px;
+    display: block; /* Requirement-2.12 */
+}
+
+#clubsnorgs, tr, td{ /* Requirement-2.B */
+    visibility: visible; /* Requirement-2.16 */
+}
