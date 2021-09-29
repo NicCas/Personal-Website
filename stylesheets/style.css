@@ -1,8 +1,6 @@
 /* Add at least one property from each of the following types:
 
     2. Text: letter-spacing, line-height, text-align, text-decoration, or text-indent
-    3. Color: (sets the text color)
-    4. Background: background, background-color, background-image, background-position, or background-repeat
     5. Borders: border, border-color, border-width, border-style, border-top, border-top-color, border-top-width, etc.
     7. Sizing: height, max-height, max-width, min-height, min-width, width
     8. Lists: list-style, list-style-image, or list-style-type
@@ -19,37 +17,26 @@
 Required Selectors
 
     A. Element selector
-    B. Grouped element selector
-    C. Class selector
-    D. ID selector
-    E. Pseudo selector -- e.g. on an <a> element
+    B. Grouped element selector]
     F. Contextual selector
     G. Details
     H. Summary
-Required Comments
-One instance of each of the above property/selectors should be 'marked' with a comment, so my program can find your tag.
-
-Your comments should look like this:
-
-selector { /* Requirement-2.Y ::
-  property: value;  /* Requirement-2.5 ::
-} */
+*/
 
 body {
     font-family: "Lucida Console", "Courier New", monospace; /* Requirement-2.1 */
-    background-color: #F5dcbd;
-    background-image: url("../Assets/Twix.jpeg");
-    background-size: cover;
-    background-repeat: repeat-y;
-    color: black;
+    background-color: #F5dcbd; /* Requirement-2.4 */
+    background-image: url("../Assets/papernoise.png");
+    background-size: 40%;
+    color: black; /* Requirement-2.3 */
     padding: 10pt;
 }
+
 a{
     color: black;
 }
 
-
-ul.head {
+ul.head { /* Requirement-2.C */
     list-style-type: none;
     margin: 10px;
     margin-bottom: 50px;
@@ -58,14 +45,15 @@ ul.head {
     box-sizing: content-box;
     height: 40px;
     overflow: auto;
-    border-bottom: thin solid black;
+    border-bottom: thin solid black; /* Requirement-2.5 */
 }
   
 li.head {
     float: left;
 }
   
-li.head a {
+
+li.head a { /* Requirement-2.E */
     display: block;
     color: black;
     text-align: center;
@@ -81,7 +69,8 @@ li.head a:hover {
     background-color: #Eab676;
     border-radius: 10px 10px 0 0;
 }
-#active {
+
+#active { /* Requirement-2.D */
     background-color: #Eab676;
     border-radius: 10px 10px 0 0;
     border-bottom: thin solid #Eab676;
